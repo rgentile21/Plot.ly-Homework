@@ -1,5 +1,5 @@
-funtion buildMetadata(sample) {
-//D3 to gather dataa from sample
+function buildMetadata(sample) {
+//D3 to gather data from sample
 var url = '/metadata/${sample}';
 d3.json(url).then(function(sample) {
 
