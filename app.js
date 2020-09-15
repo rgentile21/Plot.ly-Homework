@@ -73,8 +73,8 @@ function init() {
 var selector = d3.select("#selDataset");
 
 // Utilize sample names
-d3.json("/names").then((sampleNames) => {
-sampleNames.forEach((sample) => {
+d3.json("samples.json").then((data) => {
+var sampleNames = data.names;
   selector
     .append("option")
     .text(sample)
