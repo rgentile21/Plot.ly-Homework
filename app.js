@@ -85,7 +85,7 @@ var sampleNames = data.names;
 const firstSample = sampleNames[0];
 buildCharts(firstSample);
 buildMetadata(firstSample);
-});
+};
 }
 
 function optionChanged(newSample) {
