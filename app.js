@@ -81,18 +81,19 @@ d3.json("samples.json").then((data) => {
         .append("option")
         .text(sample)
         .property("value", sample);  
-});
+    });
 
-// Build initial plots
-const firstSample = sampleNames[0];
-buildCharts(firstSample);
-buildMetadata(firstSample);
-});
+  // Build initial plots
+    const firstSample = sampleNames[0];
+    buildCharts(firstSample);
+    buildMetadata(firstSample);
+  });
+}
 
 function optionChanged(newSample) {
-// Gather data
-buildCharts(newSample);
-buildMetadata(newSample);
+  // Gather data
+  buildCharts(newSample);
+  buildMetadata(newSample);
 }
 
 // Initialize the dashboard
