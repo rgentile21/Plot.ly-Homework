@@ -74,11 +74,13 @@ var selector = d3.select("#selDataset");
 
 // Utilize sample names
 d3.json("samples.json").then((data) => {
-var sampleNames=data.names;
-  selector
-    .append("option")
-    .text(sample)
-    .property("value", sample);
+  var sampleNames=data.names;
+   
+   sampleNames.forEach((sample) => {
+      selector
+        .append("option")
+        .text(sample)
+        .property("value", sample);  
 });
 
 // Build initial plots
